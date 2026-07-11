@@ -1,5 +1,5 @@
 ---
-title: FPGAlways的数字花园
+title: FPGAlways数字花园
 ---
 
 欢迎来到我的数字花园。

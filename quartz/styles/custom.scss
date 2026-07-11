@@ -3,7 +3,6 @@
 // Quiet, paper-like surfaces for FPGAlways's digital garden.
 :root {
   --garden-page: #f6f9f3;
-  --garden-sidebar: #f1f6ef;
   --garden-accent: #2f79a8;
   --garden-accent-soft: #5b9bc1;
   --garden-nav-hover: rgba(47, 121, 168, 0.07);
@@ -13,7 +12,6 @@
 
 :root[saved-theme="dark"] {
   --garden-page: #171c1a;
-  --garden-sidebar: #1b211e;
   --garden-accent: #77add0;
   --garden-accent-soft: #91bfd9;
   --garden-nav-hover: rgba(119, 173, 208, 0.09);
@@ -23,14 +21,21 @@
 
 html:root[saved-theme] body,
 html:root[saved-theme] body .page,
+html:root[saved-theme] body .page > #quartz-body,
 html:root[saved-theme] body .page > #quartz-body > .center,
-html:root[saved-theme] body .page > #quartz-body > .sidebar.right {
+html:root[saved-theme] body .page > #quartz-body > .sidebar.left,
+html:root[saved-theme] body .page > #quartz-body > .sidebar.right,
+html:root[saved-theme] body .page > #quartz-body > footer,
+html:root[saved-theme] body .page .explorer .explorer-content,
+html:root[saved-theme] body .page .explorer .explorer-ul,
+html:root[saved-theme] body .page .explorer .folder-outer,
+html:root[saved-theme] body .page .explorer .folder-outer > ul {
   background-color: var(--garden-page);
 }
 
 @media all and (min-width: 801px) {
   .page > #quartz-body > .sidebar.left {
-    background-color: var(--garden-sidebar);
+    background-color: var(--garden-page);
     border-right: 1px solid var(--lightgray);
   }
 }
@@ -147,7 +152,7 @@ html:root[saved-theme] body .page > #quartz-body > .sidebar.right {
 @media all and (max-width: 800px) {
   .page > #quartz-body .sidebar.left:has(.explorer),
   .page .explorer .explorer-content {
-    background-color: var(--garden-sidebar);
+    background-color: var(--garden-page);
   }
 
   .page .explorer .explorer-content {
