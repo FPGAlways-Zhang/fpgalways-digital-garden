@@ -170,6 +170,23 @@ html:root[saved-theme] body .page .explorer .folder-outer > ul {
   }
 }
 
+@media all and (min-width: 801px) {
+  .page .explorer .explorer-content {
+    margin-top: 0;
+  }
+
+  .page .explorer .explorer-content > ul.explorer-ul > li.overflow-end {
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page .explorer .explorer-content > ul.explorer-ul > li > .folder-container {
+    border-left-width: 0;
+    padding-left: 0;
+  }
+}
+
 @media all and (max-width: 800px) {
   .page > #quartz-body .sidebar.left:has(.explorer),
   .page .explorer .explorer-content {
