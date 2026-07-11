@@ -12,3 +12,5 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .npm-cache/
+.codex/
+AGENTS.md
