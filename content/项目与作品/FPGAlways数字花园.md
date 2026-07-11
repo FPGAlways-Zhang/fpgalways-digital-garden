@@ -269,6 +269,4 @@ npx.cmd quartz build
 
 不要提交 `node_modules`、`public`、`.quartz` 或 `.npm-cache`，这些目录已经通过 `.gitignore` 排除。
 
-更详细的搭建过程记录在 [[Quartz博客搭建记录]]。
-
 返回分类：[[项目与作品]]
