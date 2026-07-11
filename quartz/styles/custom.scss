@@ -1,3 +1,165 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Quiet, paper-like surfaces for FPGAlways's digital garden.
+:root {
+  --garden-page: #f6f9f3;
+  --garden-sidebar: #f1f6ef;
+  --garden-accent: #2f79a8;
+  --garden-accent-soft: #5b9bc1;
+  --garden-nav-hover: rgba(47, 121, 168, 0.07);
+  --garden-nav-active: rgba(47, 121, 168, 0.12);
+  --garden-nav-focus: rgba(47, 121, 168, 0.26);
+}
+
+:root[saved-theme="dark"] {
+  --garden-page: #171c1a;
+  --garden-sidebar: #1b211e;
+  --garden-accent: #77add0;
+  --garden-accent-soft: #91bfd9;
+  --garden-nav-hover: rgba(119, 173, 208, 0.09);
+  --garden-nav-active: rgba(119, 173, 208, 0.16);
+  --garden-nav-focus: rgba(119, 173, 208, 0.32);
+}
+
+html:root[saved-theme] body,
+html:root[saved-theme] body .page,
+html:root[saved-theme] body .page > #quartz-body > .center,
+html:root[saved-theme] body .page > #quartz-body > .sidebar.right {
+  background-color: var(--garden-page);
+}
+
+@media all and (min-width: 801px) {
+  .page > #quartz-body > .sidebar.left {
+    background-color: var(--garden-sidebar);
+    border-right: 1px solid var(--lightgray);
+  }
+}
+
+.page .explorer {
+  --explorer-row-height: 1.9rem;
+  --secondary: var(--garden-accent);
+  --tertiary: var(--garden-accent-soft);
+  --quartz-icon-color: var(--garden-accent);
+  --nav-item-background-hover: var(--garden-nav-hover);
+
+  button.desktop-explorer {
+    width: 100%;
+    min-height: 2rem;
+    color: var(--dark);
+  }
+
+  button.desktop-explorer h2 {
+    font-size: 0.9rem;
+    font-weight: 650;
+    letter-spacing: 0.02em;
+  }
+
+  .fold,
+  .folder-icon {
+    color: var(--secondary);
+    stroke: var(--secondary);
+  }
+
+  .explorer-content {
+    margin-top: 0.35rem;
+    padding-right: 0.35rem;
+    scrollbar-color: var(--lightgray) transparent;
+  }
+
+  .explorer-content ul.explorer-ul > li {
+    margin-bottom: 0.08rem;
+  }
+
+  .explorer-content .folder-outer > ul {
+    margin-left: 0.42rem;
+    padding-left: 0.68rem;
+    border-left-color: var(--lightgray);
+  }
+
+  .explorer-content .tree-item-self {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: var(--explorer-row-height);
+    border-left: 2px solid transparent;
+    border-radius: 0 0.35rem 0.35rem 0;
+  }
+
+  .explorer-content .folder-container {
+    gap: 0.18rem;
+    padding: 0.14rem 0.45rem 0.14rem 0.3rem;
+  }
+
+  .explorer-content .folder-container > svg.folder-icon {
+    position: static !important;
+    width: 0.72rem;
+    height: 0.72rem;
+    margin: 0 0.12rem 0 0;
+    opacity: 1 !important;
+    flex: 0 0 auto;
+  }
+
+  .explorer-content .folder-container > div,
+  .explorer-content .folder-button {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .explorer-content .folder-button span,
+  .explorer-content ul li > a.nav-file-title {
+    font-size: 0.91rem;
+    line-height: 1.35;
+  }
+
+  .explorer-content .folder-button span {
+    color: var(--darkgray);
+    font-weight: 600;
+  }
+
+  .explorer-content ul li > a.nav-file-title {
+    align-items: center;
+    padding: 0.25rem 0.48rem 0.25rem 0.62rem;
+    color: var(--darkgray);
+    opacity: 0.88;
+  }
+
+  .explorer-content .folder-container:hover,
+  .explorer-content ul li > a.nav-file-title:hover {
+    background-color: var(--garden-nav-hover);
+    color: var(--secondary);
+  }
+
+  .explorer-content ul li > a.nav-file-title.active {
+    border-left-color: var(--secondary);
+    background-color: var(--garden-nav-active);
+    color: var(--secondary);
+    font-weight: 650;
+    opacity: 1;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--garden-nav-focus);
+    outline-offset: 2px;
+    border-radius: 0.3rem;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .page > #quartz-body .sidebar.left:has(.explorer),
+  .page .explorer .explorer-content {
+    background-color: var(--garden-sidebar);
+  }
+
+  .page .explorer .explorer-content {
+    padding-right: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page .explorer *,
+  .page .explorer *::before,
+  .page .explorer *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
