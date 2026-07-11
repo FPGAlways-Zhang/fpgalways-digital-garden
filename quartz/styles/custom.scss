@@ -42,6 +42,23 @@ html:root[saved-theme] body .page .explorer .folder-outer > ul {
     background-color: var(--garden-page);
     border-right: 1px solid var(--lightgray);
   }
+
+  // Keep collapsed sidebar headers tall enough to remain fully visible.
+  .page .explorer.collapsed,
+  .page .toc:has(button.toc-header.collapsed) {
+    flex: 0 0 2rem;
+    min-height: 2rem;
+  }
+
+  .page button.toc-header {
+    min-height: 2rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+  }
 }
 
 .page .explorer {
