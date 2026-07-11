@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: zh-CN
-  baseUrl: fpgalways-digital-garden.pages.dev
+  baseUrl: 203605.xyz
   ignorePatterns:
     - private
     - templates

@@ -21,7 +21,7 @@ tags:
 - GitHub 分支：`v5`
 - GitHub 仓库：[FPGAlways-Zhang/fpgalways-digital-garden](https://github.com/FPGAlways-Zhang/fpgalways-digital-garden)
 - Cloudflare Pages 项目：`fpgalways-digital-garden`
-- 博客地址：[FPGAlways的数字花园](https://fpgalways-digital-garden.pages.dev/)
+- 博客地址：[FPGAlways的数字花园](https://203605.xyz/)
 
 ## 首次配置流程
 
@@ -43,7 +43,7 @@ Quartz 5 的插件会安装到项目中的 `.quartz` 目录。如果构建时出
 
 - 网站名称：`FPGAlways的数字花园`
 - 界面语言：`zh-CN`
-- 网站地址：`fpgalways-digital-garden.pages.dev`
+- 网站地址：`203605.xyz`
 - 左侧区域：搜索、深色模式和文件浏览器
 - 右侧区域：关系图谱、目录和反向链接
 
@@ -156,7 +156,7 @@ git add content quartz.config.yaml
 推送后可以在 Cloudflare 控制台的 Workers & Pages 项目中查看部署进度。最新生产部署显示成功后，刷新博客地址即可看到更新：
 
 ```text
-https://fpgalways-digital-garden.pages.dev/
+https://203605.xyz/
 ```
 
 ## 常见检查
