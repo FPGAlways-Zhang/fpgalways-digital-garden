@@ -6,4 +6,4 @@ title: AI 与开发
 
 ## Skill 列表
 
-内容正在整理中。
+- [[讲透Superpowers：AI编程Agent的软件工程方法论|讲透 Superpowers：给 AI 编程 Agent 装上一套软件工程方法论]]：从流程门禁、TDD、调试、验证和多 Agent 协作等角度，拆解 Superpowers 如何把软件工程方法论带入 AI 编程 Agent。
